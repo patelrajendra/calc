@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+    </style>
+</head>
+<body align ="center">
+    <div class="mainbody">
+    <h1>CALCULATOR</h1>
+    <!-- <form action="/" method = "post"> -->
+        <div class="container">
+            <input type="text" name="num1" placeholder="First Number" id="num1">
+            <input type="text" name="num2" placeholder="Second Number" id="num2">
+            <span style="display:none;" id="res"></span><br>
+            <button type="submit" name="submit" id="plus">+</button>
+            <button type="submit" name="submit"  id="minus" >-</button>
+            <button type="submit" name="submit"  id="multi">*</button>
+            <button type="submit" name="submit"  id="divide">/</button>
+
+        </div>
+        
+        
+    <!-- </form> -->
+    <!-- <form action="/minus" method ="post">
+        <input type="text" name="num1" placeholder="First Number">
+        <input type="text" name="num2" placeholder="Second Number">
+        
+    </form>
+    <form action="/multiply" method ="post">
+        <input type="text" name="num1" placeholder="First Number">
+        <input type="text" name="num2" placeholder="Second Number">
+        <button type="submit" name="submit" >*</button>
+    </form>
+    <form action="/divide" method ="post">
+        <input type="text" name="num1" placeholder="First Number">
+        <input type="text" name="num2" placeholder="Second Number">
+        <button type="submit" name="submit" >/</button>
+    </form> -->
+    </div>
+    <script>
+       const btn1=document.querySelector('#plus');
+       const btn2=document.querySelector('#minus');
+       const btn3=document.querySelector('#multi');
+       const btn4=document.querySelector('#divide');
+       var num1=document.querySelector('#num1');
+       var num2=document.querySelector('#num2');
+       const res=document.querySelector('#res');
+       btn1.addEventListener('click',(e)=>{
+           res.style.display="inline-block";
+           res.innerHTML=`=${Number(num1.value)+Number(num2.value)}`;
+           
+       }) 
+       btn2.addEventListener('click',(e)=>{
+           res.style.display="inline-block";
+           res.innerHTML=`=${Number(num1.value)-Number(num2.value)}`;
+           
+       }) 
+       btn3.addEventListener('click',(e)=>{
+           res.style.display="inline-block";
+           res.innerHTML=`=${Number(num1.value)*Number(num2.value)}`;
+           
+       }) 
+       btn4.addEventListener('click',(e)=>{
+           res.style.display="inline-block";
+           res.innerHTML=`=${Number(num1.value)/Number(num2.value)}`;
+           
+       }) 
+       
+    </script>
+</body>
+</html>
